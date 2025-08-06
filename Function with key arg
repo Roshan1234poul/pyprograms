@@ -1,0 +1,26 @@
+def student_report(name, grade, subject="Math", marks=0):
+    print("------ Student Report ------")
+    print(f"Name    : {name}")
+    print(f"Subject : {subject}")
+    print(f"Grade   : {grade}")
+    print(f"Marks   : {marks}")
+    if marks >= 50:
+        print("Status  : Pass")
+    else:
+        print("Status  : Fail")
+    print("----------------------------\n")
+student_report(name="Alice", grade="11th", subject="Science", marks=78)
+student_report(grade="6th", name="Bob", marks=45)
+student_report(name="Charlie", grade="8th") 
+
+
+def calculate_bill(amount, tax_rate=0.05, discount=0):
+    tax = amount * tax_rate
+    total = amount + tax - discount
+    print(f"Amount     : ₹{amount}")
+    print(f"Tax        : ₹{tax}")
+    print(f"Discount   : ₹{discount}")
+    print(f"Total Bill : ₹{total}\n")
+calculate_bill(amount=1000, discount=50)
+calculate_bill(tax_rate=0.1, amount=500)
+calculate_bill(amount=1500)
