@@ -16,3 +16,25 @@ print(calculate(5,2))
 print(calculate(5,2,"mult"))
 print(calculate(5,2,"div"))
 print(calculate(5,2,"mod"))
+
+def totalprice(price, quantity = 1, tax_rate = 0.05):
+    total = price * quantity
+    tax = total * tax_rate
+    return total + tax
+
+print("Total default quantity and tax:", totalprice(200))
+print("Total custom quantity and default tax:", totalprice(300,2))
+
+
+def Salary (Base, hra=0.2, da=0.1):
+    hra_amount = Base * hra
+    da_amount = Base * da
+    Total_Salary = Base + hra_amount + da_amount
+    return Total_Salary
+    print("Salary with default HRA and DA: ", Salary(30000))
+
+print("Salary with custom HRA and default DA: ",
+      Salary(50000, 0.3))
+print("Salary with custom HRA and DA: ",
+      Salary(60000, 0.4,0.2))
+
